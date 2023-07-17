@@ -1,0 +1,12 @@
+asm mov ah, 0x0E
+asm mov si, mystr
+label loop
+asm lodsb
+asm cmp al, 0
+goto_if end
+asm int 0x10
+goto loop
+label end
+return
+label mystr
+string "Hello World!"
