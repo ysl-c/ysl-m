@@ -56,7 +56,7 @@ class Target_x86_16 : CompileModule {
 	}
 
 	override string[] CompileSetConstant(string where, ushort value) {
-		return [format("mov [%s], %d", where, value)];
+		return [format("mov word [%s], %d", where, value)];
 	}
 
 	override string[] CompileCopyValue(string to, string from) {
