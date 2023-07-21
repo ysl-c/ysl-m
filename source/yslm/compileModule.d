@@ -3,6 +3,7 @@ module yslm.compileModule;
 class CompileModule {
 	abstract string[] CompileOrg(string org);
 	abstract string[] CompileLabelStatement(string labelName);
+	abstract string[] CompileGetLabel(string name);
 	abstract string[] CompileGosub(string where);
 	abstract string[] CompileReturnValueConstant(ushort constant);
 	abstract string[] CompileReturnValueVariable(string variable);

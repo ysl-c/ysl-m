@@ -12,6 +12,10 @@ class Target_x86_16 : CompileModule {
 		return [format("%s:", labelName)];
 	}
 
+	override string[] CompileGetLabel(string name) {
+		return [format("mov ax, %s", name)];
+	}
+
 	override string[] CompileGosub(string where) {
 		return [format("call %s", where)];
 	}

@@ -36,6 +36,15 @@ string[] CompileLine(
 			ret ~= mod.CompileLabelStatement(parts[1]);
 			break;
 		}
+		case "get_label": {
+			if (!RequiredArguments(file, line, 1, parts.length - 1)) {
+				*success = false;
+				return [];
+			}
+
+			ret ~= mod.CompileGetLabel(parts[1]);
+			break;
+		}
 		case "gosub": {
 			if (!RequiredArguments(file, line, 1, parts.length - 1)) {
 				*success = false;
